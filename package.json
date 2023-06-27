@@ -4,14 +4,19 @@
   "description": "Cucumber framework",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "ci:start-server": "angular-http-server --path ./dist/blog -p 4200",
+    "cy:run":"cypress run --headless --browser chrome",
+    "ci:cy-run":"start-server-and-test ci:start-server http://localhost:4200 cy:run"
+
   },
   "author": "Punit",
   "license": "ISC",
   "devDependencies": {
+    "angular-http-server": "^1.11.3",
     "cypress": "^12.15.0",
     "cypress-cucumber-preprocessor": "^4.3.1",
-    "cypress-xpath": "^2.0.1"
+    "cypress-xpath": "^2.0.1",
+    "start-server-and-test": "^2.0.0"
   },
   "cypress-cucumber-preprocessor": {
     "nonGlobalStepDefinitions": false,
