@@ -6,7 +6,7 @@
   "scripts": {
     "ci:start-server": "angular-http-server --path ./dist/blog -p 4200",
     "cy:run":"cypress run --headless --browser chrome",
-    "ci:cy-run":"start-server-and-test ci:start-server http://localhost:4200 cy:run"
+    "ci:cy-run":"start-server-and-test ci:start-server http://localhost:4200 && npm run cy:run"
 
   },
   "author": "Punit",

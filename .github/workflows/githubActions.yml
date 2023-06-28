@@ -6,4 +6,4 @@ jobs:
     steps:
     - name: Run Cypress Test Suite
       run: |
-      npx run ci: cy-run
+      npm run ci: cy-run
