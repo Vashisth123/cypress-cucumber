@@ -5,4 +5,5 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Run Cypress Test Suite
-      run: npm run ci:cy-run
+      run: |
+      npx run ci:cy-run
